@@ -14,11 +14,13 @@ int main()
 	platform.setIcon(window.getSystemHandle());
 	window.setFramerateLimit(60);
 
-	sf::CircleShape shape(10);
-	shape.setOrigin(10, 10);
+	const u_int radius = 10;
+
+	sf::CircleShape shape(radius);
+	shape.setOrigin(radius, radius);
 	shape.setFillColor(sf::Color::White);
 
-	const u_int fadeSpeed = 20;
+	const u_int fadeSpeed = 60;
 	u_int currentFade = fadeSpeed;
 	sf::RectangleShape fadeRect;
 	fadeRect.setSize(sf::Vector2f(window.getSize().x, window.getSize().y));
